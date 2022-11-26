@@ -1,0 +1,89 @@
+#!/bin/bas
+
+echo "do you want to create or remove"
+        read cr
+
+if [[ $cr = "create" ]]; then
+
+
+echo "do you want to make a file or a directory"
+
+read cho
+
+if [[ $cho = "file" ]]; then
+
+        echo "what do you want to name it"
+                read name
+
+        echo "CREATING FILE #%!#%!#%!#%!#%"
+                sleep 1
+        echo "CREATING FILE !#%!#%!#%!#%!#"
+                sleep 1
+        echo "CREATING FILE #%!#%!#%!#%!#%"
+                sleep 1
+        echo "CREATING FILE %!#%!#%!#%!#%!"
+                sleep 1
+        echo "!!DONE!!"
+                touch $name
+        echo "what permissions do you want to give file $name"
+                read perm
+                        chmod $perm $name
+        echo "-----------FINISHED----------"
+
+else
+       
+        echo "what do you want to name it"
+                read dir
+
+        echo "CREATING #%!#%!#%!#%!#%"
+                sleep 1
+        echo "CREATING !#%!#%!#%!#%!#"
+                sleep 1
+        echo "CREATING #%!#%!#%!#%!#%"
+                sleep 1
+        echo "CREATING %!#%!#%!#%!#%!"
+                sleep 1
+        echo "!!DONE!!"
+
+        mkdir $dir
+        echo "-----------FINISHED----------"
+
+       
+
+fi
+else
+        echo "do you want to remove a file or directory"
+                read choo
+                if [[ $choo = "file" ]]; then
+                       
+                        echo "what file do you want to remove"
+                                read filee
+                        echo "REMOVING #%!#%!#%!#%!#%"
+                                sleep 1
+                        echo "REMOVING #%!#%!#%!#%!#%"
+                                sleep 1
+                        echo "REMOVING #%!#%!#%!#%!#%"
+                                sleep 1
+                        echo "REMOVING #%!#%!#%!#%!#%"
+                                sleep 1
+                        echo "!!DONE!!"
+rm $filee
+                        echo "-----------FINISHED----------"
+else
+        echo "what directory do you  want to remove"
+                read dirr
+                        echo "REMOVING #%!#%!#%!#%!#%"
+                                sleep 1
+                        echo "REMOVING #%!#%!#%!#%!#%"
+                                sleep 1
+                        echo "REMOVING #%!#%!#%!#%!#%"
+                                sleep 1
+                        echo "REMOVING #%!#%!#%!#%!#%"
+                                sleep 1
+                        echo "!!DONE!!"
+                                sleep 1
+                        rmdir $dirr
+                        echo "-----------FINISHED----------"
+
+                fi
+fi
